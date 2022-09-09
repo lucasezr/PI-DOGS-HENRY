@@ -1,0 +1,22 @@
+.divGen {
+
+    
+    background-color: rgba(218, 214, 13, 0.56);
+    width: 50%;
+    height: 40%;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageDetail {
+    
+    background-color: white;
+    
+    width: 30%;
+    height:40%
+}

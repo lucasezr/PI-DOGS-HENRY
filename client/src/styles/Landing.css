@@ -1,0 +1,13 @@
+.divLanding {
+    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:  linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 50%),
+    url("./img/dailydog.jpg" );
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
