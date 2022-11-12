@@ -12,15 +12,17 @@ export default function Card({
   return (
     <div className="Card" key={id}>
       <Link className="linkDetail" to={`/details/${id}`}>
-        <h3> {name}</h3>
+        <div className="name-Conteiner">
+          <h3 className="h3Name"> {name}</h3>
+        </div>
         <div className="temperaments">
           {" "}
-          <p>Temperamentos:</p>
+          <p>Temperaments:</p>
           {temperaments?.map((e) => {
             return <p key={e}> {e} </p>;
           })}{" "}
         </div>
-        <h5> Peso minimo: {min_weight} </h5>
+        <h5 className="min-weight"> Minimum weight: {min_weight} </h5>
         {/* <h5> {max_weight} </h5> */}
         <img className="image" src={image} alt="img not found" />
       </Link>

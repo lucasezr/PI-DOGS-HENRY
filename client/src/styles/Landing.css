@@ -11,3 +11,49 @@
   background-position: center;
   background-size: cover;
 }
+
+.subdiv {
+  width: 60%;
+  height: 270px;
+  border-radius: 15px;
+  bottom: 30px;
+  position: absolute;
+    bottom: 100px;
+}
+
+.subdiv:hover {
+  background-color: rgba(124, 124, 124, 0.101);
+    backdrop-filter: blur(10px);
+    transition-duration: 1s;
+    
+}
+
+.subdiv-cont{
+  align-items: center;
+  margin: 5rem;
+}
+
+h1 {
+  margin:20px;
+  font-size: 20px;
+  font-family: Georgia, serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+}
+
+.buttonIngresar {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 15%;
+  height: 50%;
+  background-color: rgba(228, 224, 216, 0.275);
+  
+}
+

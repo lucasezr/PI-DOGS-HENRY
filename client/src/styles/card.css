@@ -14,11 +14,84 @@
     backdrop-filter: blur(15px); /* para usar bluer es necesario tener transparencia en el background*/
 }
 
+.name-Conteiner {
+    
+
+    width: 50%;
+    max-height: auto;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    color: rgb(255, 208, 20);
+    background-color: rgba(255, 166, 0, 0.213);
+    justify-content: center;
+    position: relative;
+    left:100px;
+    top:20px
+    
+}
+
+.h3Name {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: none;
+    /* color: rgb(255, 208, 20);
+    background-color: rgba(255, 166, 0, 0.213); */
+        
+}
+
 .temperaments {
+    margin: 3px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1.5rem 1.5rem 1.5rem 1.5rem 1.5rem; /* espacios en las columnas horizontales*/
-     
+    font-family: Georgia, serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+    position: relative;
+    top:30px;
+    text-shadow: 0 1px 0 rgb(208, 208, 208),
+            0 1px 0 #c9c9c9,
+            0 1px 0 #bbb,
+            0 1px 0 #b9b9b9,
+            0 1px 0 #aaa,
+            0 1px 1px rgba(140, 138, 138, 0.1),
+            0 0 2px rgba(120, 120, 120, 0.234),
+            0 1px 3px rgba(165, 163, 163, 0.33),
+            0 3px 5px rgba(159, 156, 156, 0.3),
+            0 3px 10px rgba(119, 118, 118, 0.196),
+            0 4px 10px rgba(106, 106, 106, 0.298),
+            0 6px 20px rgba(123, 123, 123, 0.142);
+        
+}
+
+.min-weight {
+    font-family: Georgia, serif;
+        font-size: 15px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none solid rgb(68, 68, 68);
+        font-style: italic;
+        font-variant: normal;
+        text-transform: none;
+        position: relative;
+        top:10px;
+    
 }
 
 .linkDetail {
@@ -30,5 +103,6 @@
     height: 230px;
     min-height: 230px;
     max-height: 230px;
+    border-radius: 14px;
 }
 
