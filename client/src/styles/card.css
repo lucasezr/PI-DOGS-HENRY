@@ -41,8 +41,20 @@
     font-style: italic;
     font-variant: small-caps;
     text-transform: none;
-    /* color: rgb(255, 208, 20);
-    background-color: rgba(255, 166, 0, 0.213); */
+    color: rgb(255, 208, 20);
+    text-shadow: 0 1px 0 rgba(255, 166, 0, 0.213),
+    0 1px 0 #e8b445ba,
+        0 1px 0 rgba(208, 179, 49, 0.467),
+        0 1px 0 #e0c22d87,
+        0 1px 0 rgba(210, 208, 208, 0.579),
+        0 1px 1px rgba(197, 159, 21, 0.1),
+        0 0 1px rgba(120, 120, 120, 0.234),
+        0 1px 1px rgba(141, 139, 139, 0.484),
+        0 1px 1px rgba(120, 118, 118, 0.431),
+        0 1px 1px rgba(119, 118, 118, 0.196),
+        0 1px 1px rgba(106, 106, 106, 0.452),
+        0 2px 1px rgba(103, 102, 102, 0.428);
+    /* background-color: rgba(255, 166, 0, 0.213); */
         
 }
 
@@ -63,18 +75,18 @@
     text-transform: none;
     position: relative;
     top:30px;
-    text-shadow: 0 1px 0 rgb(208, 208, 208),
-            0 1px 0 #c9c9c9,
-            0 1px 0 #bbb,
-            0 1px 0 #b9b9b9,
-            0 1px 0 #aaa,
+    text-shadow: 0 1px 0 rgba(105, 105, 105, 0.412),
+            0 1px 0 #acacacc0,
+            0 1px 0 rgba(187, 187, 187, 0.507),
+            0 1px 0 #b9b9b93b,
+            0 1px 0 rgba(210, 208, 208, 0.579),
             0 1px 1px rgba(140, 138, 138, 0.1),
-            0 0 2px rgba(120, 120, 120, 0.234),
-            0 1px 3px rgba(165, 163, 163, 0.33),
-            0 3px 5px rgba(159, 156, 156, 0.3),
-            0 3px 10px rgba(119, 118, 118, 0.196),
-            0 4px 10px rgba(106, 106, 106, 0.298),
-            0 6px 20px rgba(123, 123, 123, 0.142);
+            0 0 1px rgba(120, 120, 120, 0.234),
+            0 1px 1px rgba(165, 163, 163, 0.33),
+            0 1px 1px rgba(159, 156, 156, 0.3),
+            0 1px 1px rgba(119, 118, 118, 0.196),
+            0 1px 1px rgba(106, 106, 106, 0.298),
+            0 2px 1px rgba(123, 123, 123, 0.142);
         
 }
 
@@ -91,6 +103,18 @@
         text-transform: none;
         position: relative;
         top:10px;
+        text-shadow: 0 1px 0 rgba(105, 105, 105, 0.412),
+                0 1px 0 #acacacc0,
+                0 1px 0 rgba(187, 187, 187, 0.507),
+                0 1px 0 #b9b9b93b,
+                0 1px 0 rgba(210, 208, 208, 0.579),
+                0 1px 1px rgba(140, 138, 138, 0.1),
+                0 0 1px rgba(120, 120, 120, 0.234),
+                0 1px 1px rgba(165, 163, 163, 0.33),
+                0 1px 1px rgba(159, 156, 156, 0.3),
+                0 1px 1px rgba(119, 118, 118, 0.196),
+                0 1px 1px rgba(106, 106, 106, 0.298),
+                0 2px 1px rgba(123, 123, 123, 0.142);
     
 }
 
@@ -106,3 +130,4 @@
     border-radius: 14px;
 }
 
+/* probando */
