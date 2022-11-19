@@ -1,0 +1,132 @@
+.Card {
+    
+    background-color: rgba(218, 204, 49, 0.175);
+    display: inline-block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    height: 550px;
+    min-height: 550px;
+    width: 410px;
+    min-width: 410px;
+    border-radius: 30px;
+    backdrop-filter: blur(15px); /* para usar bluer es necesario tener transparencia en el background*/
+}
+
+.name-Conteiner {
+    
+
+    width: 50%;
+    max-height: auto;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    color: rgb(255, 208, 20);
+    background-color: rgba(255, 166, 0, 0.213);
+    justify-content: center;
+    position: relative;
+    left:100px;
+    top:20px
+    
+}
+
+.h3Name {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: none;
+    color: rgb(255, 208, 20);
+    text-shadow: 0 1px 0 rgba(255, 166, 0, 0.213),
+    0 1px 0 #e8b445ba,
+        0 1px 0 rgba(208, 179, 49, 0.467),
+        0 1px 0 #e0c22d87,
+        0 1px 0 rgba(210, 208, 208, 0.579),
+        0 1px 1px rgba(197, 159, 21, 0.1),
+        0 0 1px rgba(120, 120, 120, 0.234),
+        0 1px 1px rgba(141, 139, 139, 0.484),
+        0 1px 1px rgba(120, 118, 118, 0.431),
+        0 1px 1px rgba(119, 118, 118, 0.196),
+        0 1px 1px rgba(106, 106, 106, 0.452),
+        0 2px 1px rgba(103, 102, 102, 0.428);
+    /* background-color: rgba(255, 166, 0, 0.213); */
+        
+}
+
+.temperaments {
+    margin: 3px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.5rem 1.5rem 1.5rem 1.5rem 1.5rem; /* espacios en las columnas horizontales*/
+    font-family: Georgia, serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+    position: relative;
+    top:30px;
+    text-shadow: 0 1px 0 rgba(105, 105, 105, 0.412),
+            0 1px 0 #acacacc0,
+            0 1px 0 rgba(187, 187, 187, 0.507),
+            0 1px 0 #b9b9b93b,
+            0 1px 0 rgba(210, 208, 208, 0.579),
+            0 1px 1px rgba(140, 138, 138, 0.1),
+            0 0 1px rgba(120, 120, 120, 0.234),
+            0 1px 1px rgba(165, 163, 163, 0.33),
+            0 1px 1px rgba(159, 156, 156, 0.3),
+            0 1px 1px rgba(119, 118, 118, 0.196),
+            0 1px 1px rgba(106, 106, 106, 0.298),
+            0 2px 1px rgba(123, 123, 123, 0.142);
+        
+}
+
+.min-weight {
+    font-family: Georgia, serif;
+        font-size: 15px;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none solid rgb(68, 68, 68);
+        font-style: italic;
+        font-variant: normal;
+        text-transform: none;
+        position: relative;
+        top:10px;
+        text-shadow: 0 1px 0 rgba(105, 105, 105, 0.412),
+                0 1px 0 #acacacc0,
+                0 1px 0 rgba(187, 187, 187, 0.507),
+                0 1px 0 #b9b9b93b,
+                0 1px 0 rgba(210, 208, 208, 0.579),
+                0 1px 1px rgba(140, 138, 138, 0.1),
+                0 0 1px rgba(120, 120, 120, 0.234),
+                0 1px 1px rgba(165, 163, 163, 0.33),
+                0 1px 1px rgba(159, 156, 156, 0.3),
+                0 1px 1px rgba(119, 118, 118, 0.196),
+                0 1px 1px rgba(106, 106, 106, 0.298),
+                0 2px 1px rgba(123, 123, 123, 0.142);
+    
+}
+
+.linkDetail {
+    color: black;
+    text-decoration: none;
+}
+
+.image{
+    height: 230px;
+    min-height: 230px;
+    max-height: 230px;
+    border-radius: 14px;
+}
+
