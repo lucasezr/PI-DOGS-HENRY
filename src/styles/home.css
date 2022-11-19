@@ -9,3 +9,54 @@
     background-size: cover;
     object-fit: contain;
 }
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    
+    
+}
+
+.bannerHeader {
+    position: absolute;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.nameProject{
+    
+    left: 5%;
+    color: rgb(255, 192, 4);
+        white-space: nowrap;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        font-family: sans-serif;
+        letter-spacing: 0.1em;
+        transition: 0.3s;
+        text-shadow: 1px 1px 0 rgb(137, 128, 100), 1px 2px 0 rgba(252, 179, 76, 0.73), 1px 3px 0 rgba(245, 237, 24, 0.514), 1px 4px 0 grey,
+            1px 5px 0 rgb(248, 255, 54), 1px 6px 0 grey, 1px 7px 0 rgb(230, 193, 9), 1px 8px 0 rgb(121, 119, 123),
+            5px 13px 15px rgb(42, 40, 40);
+}
+
+.nameProject h1 {
+    color: rgba(0, 0, 0, 0.672);
+}
+.button_create_raza {
+    display: flex;
+    align-items: center;
+}
+
+.searchbar_box {
+    display: flex;
+    align-items: center;
+}
+
+.prueba {
+    border-radius: 20px;
+}

@@ -1,0 +1,8 @@
+.searchbar input {
+    border-radius: 30%;
+}
+
+.buttonSearch {
+    position: absolute;
+    border-radius: 20%;
+}

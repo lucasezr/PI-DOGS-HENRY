@@ -14,12 +14,17 @@
     backdrop-filter: blur(15px); /* para usar bluer es necesario tener transparencia en el background*/
 }
 
+.Card:hover {
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
 .name-Conteiner {
     
 
     width: 50%;
     max-height: auto;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 10px;
     color: rgb(255, 208, 20);
     background-color: rgba(255, 166, 0, 0.213);
@@ -29,6 +34,7 @@
     top:20px
     
 }
+
 
 .h3Name {
     font-family: Georgia, serif;

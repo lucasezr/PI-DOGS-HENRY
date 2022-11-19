@@ -72,8 +72,19 @@ export default function Home() {
 
   return (
     <div className="homeDiv">
-      <Link to="/dogs"> Crear Raza </Link>
-      <h1> PI DOGS</h1>
+      <div className="header">
+        <div className="button_create_raza">
+          <Link to="/dogs"> Crear Raza </Link>
+        </div>
+
+        <div className="nameProject">
+          <h1> PI DOGS</h1>
+        </div>
+
+        <div className="searchbar_box">
+          <SearchBar className="prueba" />
+        </div>
+      </div>
       <button onClick={(e) => handleClick(e)}>
         Volver a cargar todas las razas
       </button>
@@ -108,12 +119,6 @@ export default function Home() {
         </select>
       </div>
 
-      <Paginado
-        dogsPerPage={dogsPerPage}
-        allDogs={allDogs.length}
-        paginado={paginado}
-      />
-      <SearchBar />
       <div className="cartas">
         {!errorState.length ? (
           currentDogs &&
@@ -133,6 +138,12 @@ export default function Home() {
           <p> No se encontro lo que buscabas </p>
         )}
       </div>
+
+      <Paginado
+        dogsPerPage={dogsPerPage}
+        allDogs={allDogs.length}
+        paginado={paginado}
+      />
     </div>
   );
 }
