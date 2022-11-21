@@ -22,7 +22,7 @@ export default function SearchBar() {
       <input
         className="searchbar"
         type="search"
-        placeholder="Buscar.."
+        placeholder="Buscar una raza.."
         onChange={(e) => handleInputChange(e)}
       />
       <button

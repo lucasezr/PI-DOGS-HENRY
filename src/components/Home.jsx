@@ -74,49 +74,66 @@ export default function Home() {
     <div className="homeDiv">
       <div className="header">
         <div className="button_create_raza">
-          <Link to="/dogs"> Crear Raza </Link>
+          <button>
+            <Link to="/dogs" style={{ textDecoration: "none" }}>
+              {" "}
+              Crear Raza{" "}
+            </Link>
+          </button>
+        </div>
+
+        <div className="elements-header">
+          <div className="AscDesc">
+            <select onChange={(e) => handleSort(e)}>
+              <option value="asc"> Ascendente </option>
+              <option value="desc"> Descendente </option>
+            </select>
+          </div>
+
+          <div className="filterTemperament">
+            <select onChange={(e) => handleFilterByTemperament(e)}>
+              <option value="Todos">Todos</option>
+
+              {allTemps?.map((temp) => (
+                <option key={temp.id} value={temp.name}>
+                  {" "}
+                  {temp.name}{" "}
+                </option>
+              ))}
+              <option value="n/a"> n/a </option>
+            </select>
+          </div>
+
+          <div className="breeds">
+            <select onChange={(e) => handleFilterCreated(e)}>
+              <option value="all"> Todas </option>
+              <option value="api"> Existentes </option>
+              <option value="created"> Creadas </option>
+            </select>
+          </div>
+
+          <div className="orderWeight">
+            <select onChange={(e) => handleSortWeight(e)}>
+              {/* <option value= 'weight'>Peso</option> */}
+              <option value="min_weight">Mayor peso</option>
+              <option value="max_weight">Menor peso</option>
+            </select>
+          </div>
         </div>
 
         <div className="nameProject">
           <h1> PI DOGS</h1>
         </div>
 
-        <div className="searchbar_box">
-          <SearchBar className="prueba" />
+        <div className="reload_races">
+          <button onClick={(e) => handleClick(e)} className="buttonReload">
+            Volver a cargar todas las razas
+          </button>
         </div>
-      </div>
-      <button onClick={(e) => handleClick(e)}>
-        Volver a cargar todas las razas
-      </button>
-      <div>
-        <select onChange={(e) => handleSort(e)}>
-          <option value="asc"> Ascendente </option>
-          <option value="desc"> Descendente </option>
-        </select>
 
-        <select onChange={(e) => handleFilterByTemperament(e)}>
-          <option value="Todos">Todos</option>
-
-          {allTemps?.map((temp) => (
-            <option key={temp.id} value={temp.name}>
-              {" "}
-              {temp.name}{" "}
-            </option>
-          ))}
-          <option value="n/a"> n/a </option>
-        </select>
-
-        <select onChange={(e) => handleFilterCreated(e)}>
-          <option value="all"> Todas </option>
-          <option value="api"> Existentes </option>
-          <option value="created"> Creadas </option>
-        </select>
-
-        <select onChange={(e) => handleSortWeight(e)}>
-          {/* <option value= 'weight'>Peso</option> */}
-          <option value="min_weight">Mayor peso</option>
-          <option value="max_weight">Menor peso</option>
-        </select>
+        <div className="searchbar_box">
+          <SearchBar />
+        </div>
       </div>
 
       <div className="cartas">

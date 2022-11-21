@@ -44,7 +44,7 @@
     color: #000000;
     font-weight: 700;
     text-decoration: none solid rgb(68, 68, 68);
-    font-style: italic;
+    /* font-style: italic; */
     font-variant: small-caps;
     text-transform: none;
     color: rgb(255, 208, 20);
@@ -69,7 +69,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1.5rem 1.5rem 1.5rem 1.5rem 1.5rem; /* espacios en las columnas horizontales*/
-    font-family: Georgia, serif;
+    /* font-family: Georgia, serif; */
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     letter-spacing: 2px;
     word-spacing: 2px;
