@@ -4,8 +4,9 @@
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
-    background:  linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 15%),
-    url("../styles/img/perroRosa.jpg" );
+    /* background:  linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 15%),
+    url("../styles/img/perroRosa.jpg" ); */
+    background: url('./img/watercolor-seamless-pattern-dogs-white-background-dog-pet-puppy-animal-wallpaper-154971180.jpg');
     background-size: cover;
     object-fit: contain;
 }

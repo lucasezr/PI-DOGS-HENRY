@@ -72,48 +72,70 @@ export default function Home() {
 
   return (
     <div className="homeDiv">
-      <Link to="/dogs"> Crear Raza </Link>
-      <h1> PI DOGS</h1>
-      <button onClick={(e) => handleClick(e)}>
-        Volver a cargar todas las razas
-      </button>
-      <div>
-        <select onChange={(e) => handleSort(e)}>
-          <option value="asc"> Ascendente </option>
-          <option value="desc"> Descendente </option>
-        </select>
-
-        <select onChange={(e) => handleFilterByTemperament(e)}>
-          <option value="Todos">Todos</option>
-
-          {allTemps?.map((temp) => (
-            <option key={temp.id} value={temp.name}>
+      <div className="header">
+        <div className="button_create_raza">
+          <button>
+            <Link to="/dogs" style={{ textDecoration: "none" }}>
               {" "}
-              {temp.name}{" "}
-            </option>
-          ))}
-          <option value="n/a"> n/a </option>
-        </select>
+              Create a breed{" "}
+            </Link>
+          </button>
+        </div>
 
-        <select onChange={(e) => handleFilterCreated(e)}>
-          <option value="all"> Todas </option>
-          <option value="api"> Existentes </option>
-          <option value="created"> Creadas </option>
-        </select>
+        <div className="elements-header">
+          <div className="AscDesc">
+            <select onChange={(e) => handleSort(e)}>
+              <option value="asc"> Asc </option>
+              <option value="desc"> Desc </option>
+            </select>
+          </div>
 
-        <select onChange={(e) => handleSortWeight(e)}>
-          {/* <option value= 'weight'>Peso</option> */}
-          <option value="min_weight">Mayor peso</option>
-          <option value="max_weight">Menor peso</option>
-        </select>
+          <div className="filterTemperament">
+            <select onChange={(e) => handleFilterByTemperament(e)}>
+              <option value="Todos">All</option>
+
+              {allTemps?.map((temp) => (
+                <option key={temp.id} value={temp.name}>
+                  {" "}
+                  {temp.name}{" "}
+                </option>
+              ))}
+              <option value="n/a"> n/a </option>
+            </select>
+          </div>
+
+          <div className="breeds">
+            <select onChange={(e) => handleFilterCreated(e)}>
+              <option value="all"> All </option>
+              <option value="api"> Existing </option>
+              <option value="created"> Created </option>
+            </select>
+          </div>
+
+          <div className="orderWeight">
+            <select onChange={(e) => handleSortWeight(e)}>
+              {/* <option value= 'weight'>Peso</option> */}
+              <option value="min_weight">Min weight</option>
+              <option value="max_weight">Max weight</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="nameProject">
+          <h1> PI DOGS</h1>
+        </div>
+
+        <div className="reload_races">
+          <button onClick={(e) => handleClick(e)} className="buttonReload">
+            Reload all breeds
+          </button>
+        </div>
+
+        <div className="searchbar_box">
+          <SearchBar />
+        </div>
       </div>
 
-      <Paginado
-        dogsPerPage={dogsPerPage}
-        allDogs={allDogs.length}
-        paginado={paginado}
-      />
-      <SearchBar />
       <div className="cartas">
         {!errorState.length ? (
           currentDogs &&
@@ -130,9 +152,15 @@ export default function Home() {
             );
           })
         ) : (
-          <p> No se encontro lo que buscabas </p>
+          <p> What you were looking for was not found </p>
         )}
       </div>
+
+      <Paginado
+        dogsPerPage={dogsPerPage}
+        allDogs={allDogs.length}
+        paginado={paginado}
+      />
     </div>
   );
 }

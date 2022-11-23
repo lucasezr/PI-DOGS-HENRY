@@ -221,10 +221,10 @@ export default function DogCreate() {
         <button> Volver </button>
       </Link>
 
-      <h1> Crear una nueva raza</h1>
+      <h1> Create a new breed</h1>
       <form className="formulario" onSubmit={(e) => handleSubmit(e)}>
         <div>
-          <label> Nombre:</label>
+          <label> Name:</label>
           <input
             type="text"
             value={input.name}
@@ -236,7 +236,7 @@ export default function DogCreate() {
           {input.name ? <p className="errorsMsj">{errorName}</p> : ""}
         </div>
         <div>
-          <label> Altura minima: </label>
+          <label> Min height: </label>
           <input
             type="number"
             value={input.min_height}
@@ -247,7 +247,7 @@ export default function DogCreate() {
           {input.min_height ? <p className="errorsMsj">{errorMinH}</p> : ""}
         </div>
         <div>
-          <label> Altura maxima: </label>
+          <label> Max height: </label>
           <input
             type="number"
             value={input.max_height}
@@ -258,7 +258,7 @@ export default function DogCreate() {
           {input.max_height ? <p className="errorsMsj">{errorMaxH}</p> : ""}
         </div>
         <div>
-          <label> Peso minimo: </label>
+          <label> Min weight: </label>
           <input
             type="number"
             value={input.min_weight}
@@ -269,7 +269,7 @@ export default function DogCreate() {
           {input.min_weight ? <p className="errorsMsj">{errorMinW}</p> : ""}
         </div>
         <div>
-          <label> Peso maximo: </label>
+          <label> Max weight: </label>
           <input
             type="number"
             value={input.max_weight}
@@ -280,7 +280,7 @@ export default function DogCreate() {
           {input.max_weight ? <p className="errorsMsj">{errorMaxW}</p> : ""}
         </div>
         <div>
-          <label> Minima longevidad: </label>
+          <label> Life span min: </label>
           <input
             type="number"
             value={input.life_span_min}
@@ -295,7 +295,7 @@ export default function DogCreate() {
           )}
         </div>
         <div>
-          <label> Maxima longevidad: </label>
+          <label> Life span max: </label>
           <input
             type="number"
             value={input.life_span_max}
@@ -310,7 +310,7 @@ export default function DogCreate() {
           )}
         </div>
         <div>
-          <label> Imagen: </label>
+          <label> Image: </label>
           <input
             type="text"
             value={input.image}
@@ -327,7 +327,7 @@ export default function DogCreate() {
         </select>
         {input.temperaments ? <p className="errorsMsj">{errorTempers}</p> : ""}
         <button type="submit" disabled={disableDesactivate}>
-          Crear personaje
+          Create breed
         </button>
       </form>
       <div>

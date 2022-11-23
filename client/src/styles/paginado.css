@@ -1,3 +1,18 @@
 .numberPaginado {
-    margin: 5px
+    margin: 5px;
+    border-radius: 5px;
+    background: rgb(254, 216, 139);
+        background: linear-gradient(90deg, rgba(254, 216, 139, 1) 0%, rgba(224, 201, 67, 1) 6%, rgba(215, 161, 58, 1) 35%, rgba(232, 203, 35, 1) 48%, rgba(221, 193, 82, 1) 62%, rgba(226, 194, 64, 0.9640231092436975) 65%, rgba(244, 200, 0, 1) 69%, rgba(238, 213, 11, 0.8407738095238095) 72%, rgba(246, 219, 82, 1) 81%, rgba(242, 236, 96, 1) 90%, rgba(235, 220, 76, 1) 96%, rgba(255, 214, 0, 0.7175245098039216) 100%);
+    color: rgb(27, 27, 2);
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+
+}
+
+.numberPaginado:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 9px 7px;
 }

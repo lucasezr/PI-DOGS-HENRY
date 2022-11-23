@@ -20,39 +20,57 @@ export default function Detail(props) {
   return (
     // <div className="img-fondo">
     <div className="divGen">
-      <img className="imageDetail" src={myDog.image} />
-
-      <div className="cont-props">
-        <div> Nombre: {myDog.name}</div>
-        <div>
-          {" "}
-          Altura minima:{myDog.min_height ? myDog.min_height + "cm" : " "}
-        </div>
-        <div>
-          {" "}
-          Altura maxima: {myDog.max_height ? myDog.max_height + "cm" : "-"}
-        </div>
-        <div> Peso minimo: {myDog.min_weight ? myDog.min_weight : 0}kg</div>
-        <div> Peso maximo: {myDog.max_weight ? myDog.max_weight : 100} kg</div>
-        <div>
-          Longevidad minima: {myDog.life_span_min ? myDog.life_span_min : 0}{" "}
-          años
-        </div>
-        <div>
-          Longevidad maxima: {myDog.life_span_max ? myDog.life_span_max : 100}
-          años
-        </div>
-        <div>
-          Temperamentos:
-          {myDog.temperaments?.map((e) => {
-            return <p>{e}</p>;
-          })}
+      <div className="content-divGen">
+        <div className="box-contenedor">
+          <div className="imageDetail">
+            <img src={myDog.image} />
+          </div>
+          <hr className="separator-img" />
+          <div className="cont-props">
+            <div className="box-description">
+              <div className="details">
+                <div className="name"> Nombre: {myDog.name}</div>
+                <div className="min-height">
+                  {" "}
+                  Minimun height: {myDog.min_height ? myDog.min_height : 0} cm
+                </div>
+                <div className="max-height">
+                  {" "}
+                  Maximun height:{" "}
+                  {myDog.max_height ? myDog.max_height + " cm" : "-"}
+                </div>
+                <div className="min-weight-detail">
+                  {" "}
+                  Minimun weight: {myDog.min_weight ? myDog.min_weight : 0} kg
+                </div>
+                <div className="max-weight-detail">
+                  {" "}
+                  Maximun weight: {myDog.max_weight ? myDog.max_weight : 100} kg
+                </div>
+                <div className="lifespan-min">
+                  Life span min: {myDog.life_span_min ? myDog.life_span_min : 0}{" "}
+                  years
+                </div>
+                <div className="lifespan-max">
+                  Life Span max:{" "}
+                  {myDog.life_span_max ? myDog.life_span_max : 100} years
+                </div>
+              </div>
+              <hr className="div-temp-description" />
+              <div className="box-temperaments">
+                Temperaments:
+                {myDog.temperaments?.map((e) => {
+                  return <p className="temperaments-list">{e}</p>;
+                })}
+              </div>
+            </div>
+          </div>
+          <Link className="btn-detail-back" to={"/home"}>
+            {" "}
+            <button> Volver </button>
+          </Link>
         </div>
       </div>
-      <Link to={"/home"}>
-        {" "}
-        <button> Volver </button>
-      </Link>
     </div>
   );
 }
