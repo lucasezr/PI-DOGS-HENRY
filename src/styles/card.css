@@ -1,7 +1,9 @@
 .Card {
     
     background-color: rgba(218, 204, 49, 0.175);
-    display: inline-block;
+   
+    display: inline-table;
+    
     position: relative;
     align-items: center;
     justify-content: center;
@@ -131,6 +133,8 @@
 }
 
 .image{
+    width: 325px;
+    max-width: 350px;
     height: 230px;
     min-height: 230px;
     max-height: 230px;

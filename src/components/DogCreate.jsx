@@ -91,68 +91,71 @@ export default function DogCreate() {
 
   const validacionName = (entrada) => {
     if (regexS.espaciosIni.test(entrada))
-      return `No puede iniciar con espacios en blanco`;
-    if (entrada.length <= 3) return `Nombre muy corto`;
-    if (entrada.length > 30) return `Nombre muy largo`;
+      return `Cannot start with blank spaces.`;
+    if (entrada.length <= 3) return `Very short name.`;
+    if (entrada.length > 30) return `Very long name.`;
     if (regexS.numeros.test(entrada))
-      return `No se admite numeros en este campo`;
+      return `Numbers are not allowed in this field.`;
     if (regexS.caracteresEsp.test(entrada))
-      return `No se admite caracteres especiales en este campo`;
+      return `Special characters are not allowed in this field.`;
   };
   const validacionImg = (entrada) => {
-    if (!regexS.url.test(entrada)) return `Debe ser una url valida`;
+    if (!regexS.url.test(entrada)) return `It must be a valid url.`;
   };
   const validacionMinHeight = (entrada1, entrada2) => {
     if (isNaN(entrada1)) return true;
-    if (entrada1 < 15) return `El valor minimo no puede ser menor a 15 cm.`;
-    if (entrada1 > 70) return `El valor minimo no puede ser mayor a 70 cm.`;
+    if (entrada1 < 15) return `The minimum value cannot be less than 15 cm.`;
+    if (entrada1 > 70) return `The minimum value cannot be less than 70 cm.`;
     if (entrada1 > entrada2) {
-      return `El valor minimo no puede ser mayor que el valor maximo`;
+      return `The minimum value cannot be greater than the max value.`;
     }
   };
   const validacionMaxHeigh = (entrada1, entrada2) => {
     if (isNaN(entrada1)) return true;
-    if (entrada2 > 100) return `El valor maximo no puede ser mayor a 100 cm.`;
+    if (entrada2 > 100)
+      return `The maximum value cannot be greater than 100 cm.`;
     if (entrada2 < entrada1) {
-      return `El valor maximo no puede ser menor que el valor minimo`;
+      return `The maximum value cannot be less than the min value.`;
     }
   };
   const validacionMinWeight = (entrada1, entrada2) => {
     if (isNaN(entrada1)) return true;
-    if (entrada1 < 1) return `El valor minimo no puede ser menor a 1 kg.`;
-    if (entrada1 > 70) return `El valor minimo no puede ser mayor a 70 Kg.`;
+    if (entrada1 < 1) return `The minimum value cannot be less than 1 kg.`;
+    if (entrada1 > 70) return `The minimum value cannot be greater than 70 Kg.`;
     if (entrada1 > entrada2) {
-      return `El valor minimo no puede ser mayor que el valor maximo`;
+      return `The minimum value cannot be greater than the max value.`;
     }
   };
   const validacionMaxWeight = (entrada1, entrada2) => {
     if (isNaN(entrada1)) return true;
-    if (entrada2 > 100) return `El valor maximo no puede ser mayor a 100 Kg.`;
+    if (entrada2 > 100)
+      return `The maximum value cannot be greater than 100 Kg.`;
     if (entrada2 < entrada1) {
-      return `El valor maximo no puede ser menor que el valor minimo`;
+      return `The maximum value cannot be less than the min value.`;
     }
   };
   const validacionTempers = (entrada) => {
     if (entrada.length < 1) {
-      return `Se requiere que al menos tenga un temperamento`;
+      return `It is required that you at least have a temperament.`;
     }
-    if (entrada.length > 15) {
-      return `No se pueden seleccionar mas de 15 temperamentos`;
+    if (entrada.length > 12) {
+      return `You cannot select more than 12 temperaments`;
     }
   };
   const validacionMinLifeSpan = (entrada1, entrada2) => {
     if (isNaN(entrada1)) return true;
-    if (entrada1 < 6) return `El valor minimo no puede ser menor a 6 años.`;
-    if (entrada1 > 10) return `El valor minimo no puede ser mayor a 10 años.`;
+    if (entrada1 < 6) return `The minimum value cannot be less than 6 years.`;
+    if (entrada1 > 10) return `The minimum value cannot be less than 10 years.`;
     if (entrada1 > entrada2) {
-      return `El valor minimo no puede ser mayor que el valor maximo`;
+      return `The minimum value cannot be greater than the maximum value.`;
     }
   };
   const validacionMaxLifeSpan = (entrada1, entrada2) => {
     if (isNaN(entrada1)) return true;
-    if (entrada2 > 16) return `El valor maximo no puede ser mayor a 16 años.`;
+    if (entrada2 > 16)
+      return `The maximum value cannot be greater than 16 years.`;
     if (entrada2 < entrada1) {
-      return `El valor maximo no puede ser menor que el valor minimo`;
+      return `The maximum value cannot be less than the min value.`;
     }
   };
 
@@ -218,137 +221,162 @@ export default function DogCreate() {
     <div className="divGeneral">
       <Link to="/home">
         {" "}
-        <button> Volver </button>
+        <button className="btn-back"> Volver </button>
       </Link>
 
-      <h1> Crear una nueva raza</h1>
-      <form className="formulario" onSubmit={(e) => handleSubmit(e)}>
-        <div>
-          <label> Nombre:</label>
-          <input
-            type="text"
-            value={input.name}
-            name="name"
-            onChange={handleChangeName}
-            // required
-          />
+      {/* <h1> Create a new breed</h1> */}
+      <br />
+      <div className="form-container-gen">
+        <div className="box1">
+          <form className="formulario" onSubmit={(e) => handleSubmit(e)}>
+            <div className="createform-name">
+              <label className="label-form"> Name:</label>
+              <input
+                className="input-form"
+                type="text"
+                value={input.name}
+                name="name"
+                onChange={handleChangeName}
+                // required
+              />
 
-          {input.name ? <p className="errorsMsj">{errorName}</p> : ""}
-        </div>
-        <div>
-          <label> Altura minima: </label>
-          <input
-            type="number"
-            value={input.min_height}
-            name="min_height"
-            onChange={handleChange}
-            // required
-          />
-          {input.min_height ? <p className="errorsMsj">{errorMinH}</p> : ""}
-        </div>
-        <div>
-          <label> Altura maxima: </label>
-          <input
-            type="number"
-            value={input.max_height}
-            name="max_height"
-            onChange={handleChange}
-            // required
-          />
-          {input.max_height ? <p className="errorsMsj">{errorMaxH}</p> : ""}
-        </div>
-        <div>
-          <label> Peso minimo: </label>
-          <input
-            type="number"
-            value={input.min_weight}
-            name="min_weight"
-            onChange={handleChange}
-            // required
-          />
-          {input.min_weight ? <p className="errorsMsj">{errorMinW}</p> : ""}
-        </div>
-        <div>
-          <label> Peso maximo: </label>
-          <input
-            type="number"
-            value={input.max_weight}
-            name="max_weight"
-            onChange={handleChange}
-            // required
-          />
-          {input.max_weight ? <p className="errorsMsj">{errorMaxW}</p> : ""}
-        </div>
-        <div>
-          <label> Minima longevidad: </label>
-          <input
-            type="number"
-            value={input.life_span_min}
-            name="life_span_min"
-            onChange={handleChange}
-            // required
-          />
-          {input.life_span_min ? (
-            <p className="errorsMsj">{errorMinLSpan}</p>
-          ) : (
-            ""
-          )}
-        </div>
-        <div>
-          <label> Maxima longevidad: </label>
-          <input
-            type="number"
-            value={input.life_span_max}
-            name="life_span_max"
-            onChange={handleChange}
-            // required
-          />
-          {input.life_span_max ? (
-            <p className="errorsMsj">{errorMaxLSpan}</p>
-          ) : (
-            ""
-          )}
-        </div>
-        <div>
-          <label> Imagen: </label>
-          <input
-            type="text"
-            value={input.image}
-            name="image"
-            onChange={handleChangeName}
-            // required
-          />
-          {input.image ? <p className="errorsMsj">{errorImg}</p> : ""}
-        </div>
-        <select onChange={handleSelect}>
-          {allTemps.map((temp) => (
-            <option value={temp.name}> {temp.name} </option>
-          ))}
-        </select>
-        {input.temperaments ? <p className="errorsMsj">{errorTempers}</p> : ""}
-        <button type="submit" disabled={disableDesactivate}>
-          Crear personaje
-        </button>
-      </form>
-      <div>
-        <p>
-          {input.temperaments.map((el) => {
-            return (
-              <div className="tempsPick">
-                {el}
+              {input.name ? <p className="errorMsg">{errorName}</p> : ""}
+            </div>
+            <div className="createform-minH">
+              <label className="label-form"> Min height: </label>
+              <input
+                className="input-form"
+                type="number"
+                value={input.min_height}
+                name="min_height"
+                onChange={handleChange}
+                // required
+              />
+              {input.min_height ? <p className="errorMsg">{errorMinH}</p> : ""}
+            </div>
+            <div className="createform-maxH">
+              <label className="label-form"> Max height: </label>
+              <input
+                className="input-form"
+                type="number"
+                value={input.max_height}
+                name="max_height"
+                onChange={handleChange}
+                // required
+              />
+              {input.max_height ? <p className="errorMsg">{errorMaxH}</p> : ""}
+            </div>
+            <div className="createform-minW">
+              <label className="label-form"> Min weight: </label>
+              <input
+                className="input-form"
+                type="number"
+                value={input.min_weight}
+                name="min_weight"
+                onChange={handleChange}
+                // required
+              />
+              {input.min_weight ? <p className="errorMsg">{errorMinW}</p> : ""}
+            </div>
+            <div className="createform-maxW">
+              <label className="label-form"> Max weight: </label>
+              <input
+                className="input-form"
+                type="number"
+                value={input.max_weight}
+                name="max_weight"
+                onChange={handleChange}
+                // required
+              />
+              {input.max_weight ? <p className="errorMsg">{errorMaxW}</p> : ""}
+            </div>
+            <div className="createform-lifeSpanMin">
+              <label className="label-form"> Life span min: </label>
+              <input
+                className="input-form"
+                type="number"
+                value={input.life_span_min}
+                name="life_span_min"
+                onChange={handleChange}
+                // required
+              />
+              {input.life_span_min ? (
+                <p className="errorMsg">{errorMinLSpan}</p>
+              ) : (
+                ""
+              )}
+            </div>
+            <div className="createform-lifeSpanMax">
+              <label className="label-form"> Life span max: </label>
+              <input
+                className="input-form"
+                type="number"
+                value={input.life_span_max}
+                name="life_span_max"
+                onChange={handleChange}
+                // required
+              />
+              {input.life_span_max ? (
+                <p className="errorMsg">{errorMaxLSpan}</p>
+              ) : (
+                ""
+              )}
+            </div>
+            <div className="form-image">
+              <label className="label-form"> Image: </label>
+              <input
+                className="input-form"
+                type="text"
+                value={input.image}
+                name="image"
+                onChange={handleChangeName}
+                // required
+              />
+              {input.image ? <p className="errorMsg">{errorImg}</p> : ""}
+            </div>
+            <div className="temps-form"></div>
+            <select className="list-temperaments" onChange={handleSelect}>
+              {allTemps.map((temp) => (
+                <option value={temp.name}> {temp.name} </option>
+              ))}
+            </select>
+            {input.temperaments ? (
+              <p className="error-temps">{errorTempers}</p>
+            ) : (
+              ""
+            )}
+          </form>
+          <div className="conteiner-tempsPick">
+            <div className="element-temp">
+              {input.temperaments.map((el) => {
+                return (
+                  <div className="tempsPick">
+                    {el}
 
-                <button
-                  className="btn"
-                  type="button"
-                  key={el.id}
-                  onClick={() => handleDelete(el)}
-                >
-                  x
-                </button>
-              </div>
-            );
-          })}
-        </p>
+                    <button
+                      className="btn-eliminate"
+                      type="button"
+                      key={el.id}
+                      onClick={() => handleDelete(el)}
+                    >
+                      x
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+        <div className="box2">
+          <div className="imgcss">
+            <img src="https://res.cloudinary.com/dr1n4zzvd/image/upload/v1669251991/createDogPc3_hr8ofv.png"></img>
+          </div>
+          <div className="btn-create-form">
+            <button type="submit" disabled={disableDesactivate}>
+              Create breed
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

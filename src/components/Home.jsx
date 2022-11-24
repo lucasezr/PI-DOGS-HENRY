@@ -77,7 +77,7 @@ export default function Home() {
           <button>
             <Link to="/dogs" style={{ textDecoration: "none" }}>
               {" "}
-              Crear Raza{" "}
+              Create a breed{" "}
             </Link>
           </button>
         </div>
@@ -85,14 +85,14 @@ export default function Home() {
         <div className="elements-header">
           <div className="AscDesc">
             <select onChange={(e) => handleSort(e)}>
-              <option value="asc"> Ascendente </option>
-              <option value="desc"> Descendente </option>
+              <option value="asc"> Asc </option>
+              <option value="desc"> Desc </option>
             </select>
           </div>
 
           <div className="filterTemperament">
             <select onChange={(e) => handleFilterByTemperament(e)}>
-              <option value="Todos">Todos</option>
+              <option value="Todos">All</option>
 
               {allTemps?.map((temp) => (
                 <option key={temp.id} value={temp.name}>
@@ -106,17 +106,17 @@ export default function Home() {
 
           <div className="breeds">
             <select onChange={(e) => handleFilterCreated(e)}>
-              <option value="all"> Todas </option>
-              <option value="api"> Existentes </option>
-              <option value="created"> Creadas </option>
+              <option value="all"> All </option>
+              <option value="api"> Existing </option>
+              <option value="created"> Created </option>
             </select>
           </div>
 
           <div className="orderWeight">
             <select onChange={(e) => handleSortWeight(e)}>
               {/* <option value= 'weight'>Peso</option> */}
-              <option value="min_weight">Mayor peso</option>
-              <option value="max_weight">Menor peso</option>
+              <option value="min_weight">Min weight</option>
+              <option value="max_weight">Max weight</option>
             </select>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function Home() {
 
         <div className="reload_races">
           <button onClick={(e) => handleClick(e)} className="buttonReload">
-            Volver a cargar todas las razas
+            Reload all breeds
           </button>
         </div>
 
@@ -152,7 +152,7 @@ export default function Home() {
             );
           })
         ) : (
-          <p> No se encontro lo que buscabas </p>
+          <p> What you were looking for was not found </p>
         )}
       </div>
 
